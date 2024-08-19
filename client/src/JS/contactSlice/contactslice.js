@@ -3,7 +3,7 @@ import axios from 'axios'
 
 export const getcontact=createAsyncThunk('/getcontact',async()=>{
     try {
-        let resultat= await axios.get('http://localhost:5000/contact/all')
+        let resultat= await axios.get('mernback-nine.vercel.app/contact/all')
         return  resultat;
     } catch (error) {
         console.log(error)
@@ -11,7 +11,7 @@ export const getcontact=createAsyncThunk('/getcontact',async()=>{
 })
 export const addcontact=createAsyncThunk('/addcontact',async(newcontact)=>{
     try{
-        let resultat= await axios.post('http://localhost:5000/contact/add',newcontact)
+        let resultat= await axios.post('mernback-nine.vercel.app/contact/add',newcontact)
         return  resultat;   
 
     }catch (error) {
@@ -20,7 +20,7 @@ export const addcontact=createAsyncThunk('/addcontact',async(newcontact)=>{
 })
 export const deletecontact=createAsyncThunk('/deletecontact',async(id)=>{
     try{
-        let resultat= await axios.delete(`http://localhost:5000/contact/${id}`)
+        let resultat= await axios.delete(`mernback-nine.vercel.app/contact/${id}`)
         return  resultat;   
 
     }catch (error) {
@@ -29,7 +29,7 @@ export const deletecontact=createAsyncThunk('/deletecontact',async(id)=>{
 })
 export const updatecontact=createAsyncThunk('/updatecontact',async(id,upcontact)=>{
     try{
-        let resultat= await axios.put(`http://localhost:5000/contact/${id}`,upcontact)
+        let resultat= await axios.put(`mernback-nine.vercel.app/contact/${id}`,upcontact)
         return  resultat;   
 
     }catch (error) {
